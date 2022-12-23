@@ -44,3 +44,10 @@ describe("greaterThan and lessThanCheck for 2 + 2", () => {
     expect(result).toBeLessThanOrEqual(4);
   });
 });
+
+describe("arrays", () => {
+  const arr = ["tissue", "toothpaste", "milk"];
+  it("checks if contains milk", () => {
+    expect(arr).toContain("milk");
+  });
+});
