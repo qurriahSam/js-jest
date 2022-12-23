@@ -14,6 +14,10 @@ describe("description one", () => {
 describe("check truthy or falsey", () => {
   it("null check", () => {
     const n = null;
+    expect(n).toBeNull();
+  });
+  it("falsy check", () => {
+    const n = null;
     expect(n).toBeFalsy();
   });
   it("true check", () => {
