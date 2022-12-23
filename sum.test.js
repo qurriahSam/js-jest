@@ -25,3 +25,22 @@ describe("check truthy or falsey", () => {
     expect(n).toBeTruthy();
   });
 });
+
+describe("greaterThan and lessThanCheck for 2 + 2", () => {
+  const result = 2 + 2;
+  it("is equal to four", () => {
+    expect(result).toEqual(4);
+  });
+  it("is greater than 3", () => {
+    expect(result).toBeGreaterThan(3);
+  });
+  it("is greater than or equal to 4", () => {
+    expect(result).toBeGreaterThanOrEqual(4);
+  });
+  it("is less than 7", () => {
+    expect(result).toBeLessThan(7);
+  });
+  it("is less than or equal to 4", () => {
+    expect(result).toBeLessThanOrEqual(4);
+  });
+});
