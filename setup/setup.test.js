@@ -1,12 +1,15 @@
 let animals = ["cow", "goat", "lion", "dog"];
 
+// beforeAll runs once before all tests run also has afterAll
+
 // beforeEach() runs b4 each test afterEach() runs after each test
 
-beforeEach(() => {
-  animals = ["cow", "goat", "lion", "dog"];
-});
-
 describe("animals array", () => {
+  //scoped so that it does'nt run b4 all tests in file
+  beforeEach(() => {
+    animals = ["cow", "goat", "lion", "dog"];
+  });
+
   it("should add animal to end of array", () => {
     animals.push("alligator");
     expect(animals[animals.length - 1]).toBe("alligator");
