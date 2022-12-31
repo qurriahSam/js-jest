@@ -24,3 +24,23 @@ describe("mocks callback in function", () => {
     expect(mockCalledback.mock.results[1].value).toBe(43);
   });
 });
+
+describe("mock return value", () => {
+  const mockFn = jest.fn();
+  mockFn.mockReturnValueOnce(true).mockReturnValueOnce(false).mockReturnValueOnce("Hello");
+
+  it("check mock one value is true", () => {
+    const result = mockFn();
+    expect(result).toBe(true);
+  });
+
+  it("check mock 2 value is false", () => {
+    const result = mockFn();
+    expect(result).toBe(false);
+  });
+
+  it("check mock 3 value is Hello", () => {
+    const result = mockFn();
+    expect(result).toBe("Hello");
+  });
+});
